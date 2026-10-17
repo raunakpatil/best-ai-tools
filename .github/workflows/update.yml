@@ -1,0 +1,29 @@
+# Rebuilds README.md from Radar's open data (raunakpatil.com/ai-tools/radar.json) a few hours after the site refreshes
+# it (Mondays and Thursdays), and commits only when something changed. Can also be started by hand from the Actions tab.
+name: Update the list
+on:
+  schedule:
+    - cron: '40 6 * * 1,4'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the README
+        run: node scripts/build-readme.mjs
+      - name: Commit
+        run: |
+          git add README.md
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "This week's AI tools"
+          git push

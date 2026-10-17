@@ -1,0 +1,59 @@
+name: Suggest a tool
+description: An AI tool that should be on Radar
+title: "Suggest: "
+labels: [suggestion]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. Granola
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Its website, or its GitHub, Hugging Face or Product Hunt page
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do?
+      description: One or two plain sentences, as you'd tell a friend
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Chat & Assistants
+        - Research & Search
+        - Coding
+        - Agents & Automation
+        - Image
+        - Video
+        - Voice & Audio
+        - Music
+        - Writing
+        - Productivity
+        - Design & 3D
+        - Build with AI
+  - type: dropdown
+    id: price
+    attributes:
+      label: Price
+      options:
+        - Free
+        - Free plan, paid upgrades
+        - Paid
+        - Open source
+  - type: checkboxes
+    id: mine
+    attributes:
+      label: About you
+      options:
+        - label: I make this tool (that's fine, just say so)
