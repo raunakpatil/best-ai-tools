@@ -15,8 +15,29 @@ Search them all, or describe what you need in plain words, on **[raunakpatil.com
 
 </div>
 
+## What Radar looks like
+
+**Ask Radar** in plain words, and it suggests the tools that fit, with a reason for each:
+
+<a href="https://raunakpatil.com/radar"><img src="assets/ask-radar.webp" alt="Ask Radar suggesting tools for turning a podcast into short clips"></a>
+
+**The latest in AI**: the newest headlines from nine sources (TechCrunch, The Verge, The Decoder, the AI labs' blogs and more), and the open models trending on Hugging Face this week:
+
+<a href="https://raunakpatil.com/radar"><img src="assets/radar.webp" alt="Radar's latest AI news and trending open models"></a>
+
+**The directory**: browse all of them, the Top 50 or the new releases, and filter by source, price and category:
+
+<a href="https://raunakpatil.com/radar"><img src="assets/directory.webp" alt="Radar's directory of AI tools"></a>
+
+**On a phone**, and a page for every list and every well-known tool:
+
+<a href="https://raunakpatil.com/radar"><img src="assets/phones.webp" alt="Radar on a phone: the news, the tools and a tool's page"></a>
+
+<a href="https://raunakpatil.com/ai-tools/"><img src="assets/ai-tools-page.webp" alt="Radar's page of the best AI video tools"></a>
+
 ## Contents
 
+- [What Radar looks like](#what-radar-looks-like)
 - [Top 50 AI tools](#top-50-ai-tools)
 - [Best AI tools by category](#best-ai-tools-by-category)
   - [Best AI chatbots and assistants](#best-ai-chatbots-and-assistants)
