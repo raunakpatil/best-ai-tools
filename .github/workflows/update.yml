@@ -4,6 +4,7 @@ name: Update the list
 on:
   schedule:
     - cron: '40 6 * * 1,4'
+    - cron: '0 3 1 * *'   # and as each month begins, after the site's own monthly rebuild
   workflow_dispatch:
 permissions:
   contents: write
