@@ -44,6 +44,13 @@ Paste as one comma-separated line (about 480 characters, under YouTube's 500 lim
 ai tools, best ai tools, ai tools 2026, ai tool finder, ai tools directory, list of ai tools, new ai tools, free ai tools, open source ai, ai tools for creators, ai video tools, ai coding tools, chatgpt alternatives, claude, gemini, cursor, perplexity, opusclip, hugging face trending, ai news, top 50 ai tools, which ai tool should i use, ai productivity, ai search, radar, raunak patil, best ai tools list, ai tools ranked, ai launch video
 ```
 
+## Finished thumbnails
+
+Ready to upload (1280 x 720 JPEG, each under 2 MB) in `thumbnails/`:
+`1-which-one.jpg`, `2-forty-tabs.jpg`, `3-ask-it-anything.jpg`, `4-6436-ai-tools.jpg`,
+`5-before-radar.jpg`. Source images and the overlay script are in `thumbnails/src/`
+(`NODE_PATH=/opt/node-tools/node_modules node thumbnails/src/make.mjs` from `video/` rebuilds them).
+
 ## Thumbnail prompts
 
 Thumbnails are 1280 x 720. AI image models often garble lettering, so generate the picture without
