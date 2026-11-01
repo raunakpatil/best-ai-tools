@@ -6,24 +6,14 @@
 
 **The best AI tools on the radar, updated every week.**
 
-6,436 AI tools ranked by category, a Top 50, new releases, free and open-source picks.<br>
+6,455 AI tools ranked by category, a Top 50, new releases, free and open-source picks.<br>
 Search them all, or describe what you need in plain words, on **[raunakpatil.com/radar](https://raunakpatil.com/radar)**.
 
-[![Updated](https://img.shields.io/badge/updated-29_October_2026-111?style=flat-square)](https://raunakpatil.com/radar)
-[![AI tools](https://img.shields.io/badge/AI_tools-6%2C436-111?style=flat-square)](https://raunakpatil.com/ai-tools/)
+[![Updated](https://img.shields.io/badge/updated-1_November_2026-111?style=flat-square)](https://raunakpatil.com/radar)
+[![AI tools](https://img.shields.io/badge/AI_tools-6%2C455-111?style=flat-square)](https://raunakpatil.com/ai-tools/)
 [![Open data](https://img.shields.io/badge/open_data-radar.json-111?style=flat-square)](https://raunakpatil.com/ai-tools/radar.json)
 
 </div>
-
-
-
-
-
-https://github.com/user-attachments/assets/8362f411-d73e-43af-9073-47056cab0603
-
-
-
-
 
 ## What Radar looks like
 
@@ -71,7 +61,7 @@ https://github.com/user-attachments/assets/8362f411-d73e-43af-9073-47056cab0603
 
 ## Top 50 AI tools
 
-The fifty worth knowing in October 2026, across every kind of work. Each name opens its page on Radar: what it does in plain words, what it costs, where it ranks and what's like it. [See them on Radar ↗](https://raunakpatil.com/ai-tools/top-50)
+The fifty worth knowing in November 2026, across every kind of work. Each name opens its page on Radar: what it does in plain words, what it costs, where it ranks and what's like it. [See them on Radar ↗](https://raunakpatil.com/ai-tools/top-50)
 
 | # | Tool | What it does | Price | |
 | --: | --- | --- | --- | :-: |
@@ -162,15 +152,15 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**openclaw**](https://raunakpatil.com/ai-tools/tool/openclaw) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | ★ 393k | [↗](https://github.com/openclaw/openclaw) |
+| [**openclaw**](https://raunakpatil.com/ai-tools/tool/openclaw) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | ★ 394k | [↗](https://github.com/openclaw/openclaw) |
 | [**The Ultra-Scale Playbook**](https://raunakpatil.com/ai-tools/tool/the-ultra-scale-playbook) | The ultimate guide to training LLM on large GPU Clusters | ♥ 4.1k | [↗](https://huggingface.co/spaces/nanotron/ultrascale-playbook) |
 | [**Cowork**](https://raunakpatil.com/ai-tools/tool/cowork) | Turn Claude into your digital coworker | ▲ 1.1k | [↗](https://www.producthunt.com/r/N6NGJCGOTQURKX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| [**deepseek-harness**](https://raunakpatil.com/ai-tools/tool/deepseek-harness) | DeepSeek Harness: Everything is a Plugin. | ★ 265k | [↗](https://github.com/deepseek-ai/deepseek-harness) |
+| [**deepseek-harness**](https://raunakpatil.com/ai-tools/tool/deepseek-harness) | DeepSeek Harness: Everything is a Plugin. | ★ 268k | [↗](https://github.com/deepseek-ai/deepseek-harness) |
 | [**The Smol Training Playbook**](https://raunakpatil.com/ai-tools/tool/the-smol-training-playbook) | The secrets to building world-class LLMs | ♥ 3.3k | [↗](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook) |
 
 </details>
 
-**[All 639 Chat & Assistants tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-chatbots)**
+**[All 640 Chat & Assistants tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-chatbots)**
 
 ### Best AI research and search tools
 
@@ -199,15 +189,15 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**ECC**](https://raunakpatil.com/ai-tools/tool/ecc) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code,… | ★ 292k | [↗](https://github.com/affaan-m/ECC) |
+| [**ECC**](https://raunakpatil.com/ai-tools/tool/ecc) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code,… | ★ 294k | [↗](https://github.com/affaan-m/ECC) |
 | **MTEB Leaderboard** | Embedding Leaderboard | ♥ 7.8k | [↗](https://huggingface.co/spaces/mteb/leaderboard) |
 | [**Sider 5.0: Deep Research with Wisebase**](https://raunakpatil.com/ai-tools/tool/sider-5-0-deep-research-with-wisebase) | Mimic Human Research & Save Findings in AI Knowledge Base | ▲ 1.3k | [↗](https://www.producthunt.com/r/BIU2Z36EKTT4Y2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| [**Agent-Reach**](https://raunakpatil.com/ai-tools/tool/agent-reach) | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu, one CLI, zero… | ★ 106k | [↗](https://github.com/Panniantong/Agent-Reach) |
+| [**Agent-Reach**](https://raunakpatil.com/ai-tools/tool/agent-reach) | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu, one CLI, zero… | ★ 107k | [↗](https://github.com/Panniantong/Agent-Reach) |
 | [**Open VLM Leaderboard**](https://raunakpatil.com/ai-tools/tool/open-vlm-leaderboard) | VLMEvalKit Evaluation Results Collection | ♥ 1.0k | [↗](https://huggingface.co/spaces/opencompass/open_vlm_leaderboard) |
 
 </details>
 
-**[All 526 Research & Search tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-research-tools)**
+**[All 530 Research & Search tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-research-tools)**
 
 ### Best AI coding tools
 
@@ -255,13 +245,13 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**ponytail**](https://raunakpatil.com/ai-tools/tool/ponytail) | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. | ★ 180k | [↗](https://github.com/DietrichGebert/ponytail) |
+| [**ponytail**](https://raunakpatil.com/ai-tools/tool/ponytail) | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. | ★ 182k | [↗](https://github.com/DietrichGebert/ponytail) |
 | [**DeepSite v4**](https://raunakpatil.com/ai-tools/tool/deepsite-v4) | Generate any application by Vibe Coding it | ♥ 17k | [↗](https://huggingface.co/spaces/enzostvs/deepsite) |
 | **MGX (Now Atoms)** | The first AI dev team | ▲ 1.3k | [↗](https://www.producthunt.com/r/UBMDWHBWFWKKCZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 
 </details>
 
-**[All 918 Coding tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-coding-tools)**
+**[All 927 Coding tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-coding-tools)**
 
 ### Best AI agents and automation tools
 
@@ -296,15 +286,15 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**rea**](https://raunakpatil.com/ai-tools/tool/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | ★ 405k | [↗](https://github.com/morluto/rea) |
+| [**rea**](https://raunakpatil.com/ai-tools/tool/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | ★ 416k | [↗](https://github.com/morluto/rea) |
 | **OmniParser V2** | OmniParser, turn your LLM into GUI agent | ♥ 463 | [↗](https://huggingface.co/spaces/microsoft/OmniParser-v2) |
 | [**Trace**](https://raunakpatil.com/ai-tools/tool/trace) | Workflow Automations for the Human 👾 AI Workforce | ▲ 1.5k | [↗](https://www.producthunt.com/r/P4DHCVHLPH3IZH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| [**superpowers**](https://raunakpatil.com/ai-tools/tool/superpowers) | An agentic skills framework & software development methodology that works. | ★ 308k | [↗](https://github.com/obra/superpowers) |
-| **Unit 1 Quiz - AI Agent Fundementals** | Test your knowledge of the Agent fundamentals. | ♥ 352 | [↗](https://huggingface.co/spaces/agents-course/unit_1_quiz) |
+| [**superpowers**](https://raunakpatil.com/ai-tools/tool/superpowers) | An agentic skills framework & software development methodology that works. | ★ 310k | [↗](https://github.com/obra/superpowers) |
+| **Unit 1 Quiz - AI Agent Fundementals** | Test your knowledge of the Agent fundamentals. | ♥ 354 | [↗](https://huggingface.co/spaces/agents-course/unit_1_quiz) |
 
 </details>
 
-**[All 1,066 Agents & Automation tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-agents)**
+**[All 1,072 Agents & Automation tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-agents)**
 
 ### Best AI image generators and editors
 
@@ -346,13 +336,13 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 | --- | --- | --- | :-: |
 | [**AutoGPT**](https://raunakpatil.com/ai-tools/tool/autogpt) | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on… | ★ 188k | [↗](https://github.com/Significant-Gravitas/AutoGPT) |
 | [**AI Comic Factory**](https://raunakpatil.com/ai-tools/tool/ai-comic-factory) | Create your own AI comic with a single prompt | ♥ 11k | [↗](https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory) |
-| [**Perplexity Deep Research**](https://raunakpatil.com/ai-tools/tool/perplexity-deep-research) | Save hours of time in-depth research and analysis | ▲ 772 | [↗](https://www.producthunt.com/r/YZHQLBNBRX4LG3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
+| [**Perplexity Deep Research**](https://raunakpatil.com/ai-tools/tool/perplexity-deep-research) | Save hours of time in-depth research and analysis | ▲ 771 | [↗](https://www.producthunt.com/r/YZHQLBNBRX4LG3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | **stable-diffusion-webui** | Stable Diffusion web UI | ★ 165k | [↗](https://github.com/AUTOMATIC1111/stable-diffusion-webui) |
 | [**IllusionDiffusion**](https://raunakpatil.com/ai-tools/tool/illusiondiffusion) | Generate stunning high quality illusion artwork | ♥ 5.5k | [↗](https://huggingface.co/spaces/AP123/IllusionDiffusion) |
 
 </details>
 
-**[All 855 Image tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-image-generators)**
+**[All 852 Image tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-image-generators)**
 
 ### Best AI video tools
 
@@ -393,15 +383,15 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**VoiceStudio**](https://raunakpatil.com/ai-tools/tool/voicestudio) | VoiceStudio is the open-source, fully-local ElevenLabs alternative, voice cloning, voice design, video dubbing, dictation, transcription &… | ★ 94k | [↗](https://github.com/debpalash/VoiceStudio) |
+| [**VoiceStudio**](https://raunakpatil.com/ai-tools/tool/voicestudio) | VoiceStudio is the open-source, fully-local ElevenLabs alternative, voice cloning, voice design, video dubbing, dictation, transcription &… | ★ 97k | [↗](https://github.com/debpalash/VoiceStudio) |
 | [**Live Portrait**](https://raunakpatil.com/ai-tools/tool/live-portrait) | Apply the motion of a video on a portrait | ♥ 3.8k | [↗](https://huggingface.co/spaces/KlingTeam/LivePortrait) |
 | [**Clueso**](https://raunakpatil.com/ai-tools/tool/clueso) | Create stunning product videos in minutes with AI | ▲ 1.3k | [↗](https://www.producthunt.com/r/HGS6ISJPCW77B2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| [**hyperframes**](https://raunakpatil.com/ai-tools/tool/hyperframes) | Write HTML. Render video. Built for agents. | ★ 75k | [↗](https://github.com/heygen-com/hyperframes) |
+| [**hyperframes**](https://raunakpatil.com/ai-tools/tool/hyperframes) | Write HTML. Render video. Built for agents. | ★ 77k | [↗](https://github.com/heygen-com/hyperframes) |
 | [**Wan2.2 14B Fast**](https://raunakpatil.com/ai-tools/tool/wan2-2-14b-fast) | generate a video from an image with a text prompt | ♥ 3.8k | [↗](https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster) |
 
 </details>
 
-**[All 407 Video tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-video-tools)**
+**[All 403 Video tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-video-tools)**
 
 ### Best AI voice and audio tools
 
@@ -445,7 +435,7 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 </details>
 
-**[All 420 Voice & Audio tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-voice-tools)**
+**[All 424 Voice & Audio tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-voice-tools)**
 
 ### Best AI music generators
 
@@ -474,12 +464,12 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 | **nuclear** | Streaming music player that finds free music for you | ★ 19k | [↗](https://github.com/nukeop/nuclear) |
 | [**Di♪♪Rhythm**](https://raunakpatil.com/ai-tools/tool/di-rhythm) | Blazingly Fast and Embarrassingly Simple Song Generation | ♥ 689 | [↗](https://huggingface.co/spaces/ASLP-lab/DiffRhythm) |
 | [**Beatoven.ai**](https://raunakpatil.com/ai-tools/tool/beatoven-ai) | AI composer for crafting the perfect background music | ▲ 815 | [↗](https://www.producthunt.com/r/7PG2LOPNPAZ2ZF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| **video-shotcraft** | AI video skill for Claude Code & Codex, cinematic, editable product promos with Remotion: 124 shot recipe cards, 150 motion previews, beat… | ★ 14k | [↗](https://github.com/Vincentwei1021/video-shotcraft) |
+| **video-shotcraft** | AI video skill for Claude Code & Codex, cinematic, editable product promos with Remotion: 124 shot recipe cards, 150 motion previews, beat… | ★ 16k | [↗](https://github.com/Vincentwei1021/video-shotcraft) |
 | [**ACE Step**](https://raunakpatil.com/ai-tools/tool/ace-step) | A Step Towards Music Generation Foundation Model | ♥ 689 | [↗](https://huggingface.co/spaces/ACE-Step/ACE-Step) |
 
 </details>
 
-**[All 89 Music tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-music-generators)**
+**[All 88 Music tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-music-generators)**
 
 ### Best AI writing tools
 
@@ -509,14 +499,14 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
 | [**prompt-optimizer**](https://raunakpatil.com/ai-tools/tool/prompt-optimizer) | An AI prompt optimizer for writing better prompts and getting better AI results. | ★ 40k | [↗](https://github.com/linshenkx/prompt-optimizer) |
-| **Free AI Humanizer** | Free, no-signup AI text humanizer. Bilingual EN/ZH. | ♥ 487 | [↗](https://huggingface.co/spaces/Lynote/free-ai-humanizer) |
+| **Free AI Humanizer** | Free, no-signup AI text humanizer. Bilingual EN/ZH. | ♥ 488 | [↗](https://huggingface.co/spaces/Lynote/free-ai-humanizer) |
 | [**YouMind**](https://raunakpatil.com/ai-tools/tool/youmind) | The first AI creation studio where learning meets writing | ▲ 1.2k | [↗](https://www.producthunt.com/r/7E5DIGQSMJROEQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | [**nextai-translator**](https://raunakpatil.com/ai-tools/tool/nextai-translator) | 基于 ChatGPT API 的划词翻译浏览器插件和跨平台桌面端应用 - Browser extension and cross-platform desktop application for translation based on ChatGPT API. | ★ 25k | [↗](https://github.com/nextai-translator/nextai-translator) |
 | **Instagram Story Viewer** | View Instagram Stories anonymously and download for free | ♥ 222 | [↗](https://huggingface.co/spaces/SocialSleuth/Instagram-story-viewer) |
 
 </details>
 
-**[All 102 Writing tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-writing-tools)**
+**[All 101 Writing tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-writing-tools)**
 
 ### Best AI productivity tools
 
@@ -559,14 +549,14 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
 | [**markitdown**](https://raunakpatil.com/ai-tools/tool/markitdown) | Python tool for converting files and office documents to Markdown. | ★ 193k | [↗](https://github.com/microsoft/markitdown) |
-| [**MinerU Document Extraction Tools**](https://raunakpatil.com/ai-tools/tool/mineru-document-extraction-tools) | Embedded MinerU document extraction demo | ♥ 679 | [↗](https://huggingface.co/spaces/opendatalab/MinerU) |
+| [**MinerU Document Extraction Tools**](https://raunakpatil.com/ai-tools/tool/mineru-document-extraction-tools) | Embedded MinerU document extraction demo | ♥ 681 | [↗](https://huggingface.co/spaces/opendatalab/MinerU) |
 | [**Remy AI**](https://raunakpatil.com/ai-tools/tool/remy-ai) | Anyone can sleep and recover better | ▲ 2.1k | [↗](https://www.producthunt.com/r/4Z3OJZYN4KLF27?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | [**docling**](https://raunakpatil.com/ai-tools/tool/docling) | Get your documents ready for gen AI | ★ 70k | [↗](https://github.com/docling-project/docling) |
 | **ID Document Recognition SDK** | FaceOnLive On-Premise Solution | ♥ 346 | [↗](https://huggingface.co/spaces/FaceOnLive/ID-Document-Recognition-SDK) |
 
 </details>
 
-**[All 390 Productivity tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-productivity-tools)**
+**[All 393 Productivity tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-productivity-tools)**
 
 ### Best AI design and 3D tools
 
@@ -603,7 +593,7 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 | Tool | What it does | Popularity | |
 | --- | --- | --- | :-: |
-| [**graphify**](https://raunakpatil.com/ai-tools/tool/graphify) | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code,… | ★ 138k | [↗](https://github.com/Graphify-Labs/graphify) |
+| [**graphify**](https://raunakpatil.com/ai-tools/tool/graphify) | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code,… | ★ 140k | [↗](https://github.com/Graphify-Labs/graphify) |
 | [**Hunyuan3D-2.0**](https://raunakpatil.com/ai-tools/tool/hunyuan3d-2-0) | Text-to-3D and Image-to-3D Generation | ♥ 3.4k | [↗](https://huggingface.co/spaces/tencent/Hunyuan3D-2) |
 | [**JoggAI 2.0: AI Avatar Generator**](https://raunakpatil.com/ai-tools/tool/joggai-2-0-ai-avatar-generator) | Create lifelike, personalized AI avatars from text prompts | ▲ 955 | [↗](https://www.producthunt.com/r/XI5P4X4KIX46MZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | [**ruflo**](https://raunakpatil.com/ai-tools/tool/ruflo) | 🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI… | ★ 80k | [↗](https://github.com/ruvnet/ruflo) |
@@ -611,7 +601,7 @@ The hand-picked tools in each category, in Radar's order, then the most popular 
 
 </details>
 
-**[All 259 Design & 3D tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-design-tools)**
+**[All 260 Design & 3D tools, ranked ↗](https://raunakpatil.com/ai-tools/best-ai-design-tools)**
 
 ### Best AI tools for building with AI
 
@@ -666,9 +656,17 @@ The newest on Radar, newest first: open-source projects, Hugging Face apps and P
 
 | Tool | What it does | Released | |
 | --- | --- | --- | :-: |
+| **Vaani Developer Platform** | The only voice AI harness that you'll ever need | 30 Oct 2026 | [↗](https://www.producthunt.com/r/PLG3DPJZGCJSAB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
+| **SpeakON Agent** | Turn natural speech into real work for an agent to complete | 30 Oct 2026 | [↗](https://www.producthunt.com/r/GUQI7NTMSNKCWZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
+| **Mika** | An on-device AI agent for Android that operates apps and the web to get things done for you. | 29 Oct 2026 | [↗](https://github.com/wangzan101/Mika) |
+| **Empacer** | The voice-first assistant for small business owners | 29 Oct 2026 | [↗](https://www.producthunt.com/r/RXY756OTRKZOLG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
+| **Scape** | An intelligent email inbox that works for you | 29 Oct 2026 | [↗](https://www.producthunt.com/r/OG2OR3JKMHZ566?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | **TheySaid 4.0** | See how users will react, right where you build. | 27 Oct 2026 | [↗](https://www.producthunt.com/r/FIY7DCKNBRL5M2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
+| **Overmind** | Open-source platform for continuous learning | 27 Oct 2026 | [↗](https://www.producthunt.com/r/H5DIPWPHSZEZY4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | **Strawberry 1.0** | AI Browser that saves your team >100h/week | 26 Oct 2026 | [↗](https://www.producthunt.com/r/VLEJBVBONXC6FH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | **GEAR** | Recursive self-improvement of LLM agent harnesses | 26 Oct 2026 | [↗](https://huggingface.co/spaces/WizardTY/GEAR) |
+| **bla** | 🛡️ BLA (Blind LLM Agents), Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against… | 25 Oct 2026 | [↗](https://github.com/qybaihe/bla) |
+| **bama** | BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps with Swift and SwiftUI. | 24 Oct 2026 | [↗](https://github.com/daveebbelaar/bama) |
 | **Qwen Image 2.1 Realtime** | Real-time t2i & editing with a Qwen-Image-2.1 2-step LoRA | 23 Oct 2026 | [↗](https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime) |
 | **Claude Duet** | Proactive agent that understands what needs your attention | 22 Oct 2026 | [↗](https://www.producthunt.com/r/E2X5OB7ZYY7LBL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 | **DeepCell** | Your deadline survival kit for office work | 22 Oct 2026 | [↗](https://www.producthunt.com/r/QQW4YFA2J3HRIM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
@@ -683,14 +681,6 @@ The newest on Radar, newest first: open-source projects, Hugging Face apps and P
 | **FIBO 2.0 Edit Turbo** | Fibo 2.0 Edit Turbo image editing in 4 steps | 19 Oct 2026 | [↗](https://huggingface.co/spaces/briaai/Fibo-2.0-editing) |
 | **MOSS-Image** | Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient… | 16 Oct 2026 | [↗](https://github.com/OpenMOSS/MOSS-Image) |
 | **reason-network** | Reason Network: your team's coding agents, talking to each other. The engine behind `reason network`. | 16 Oct 2026 | [↗](https://github.com/reason-machines/reason-network) |
-| **Jockey by TwelveLabs** | Your entire video library: organized, searchable, understood | 16 Oct 2026 | [↗](https://www.producthunt.com/r/H3AVDIX7A2JROL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
-| **earshot** | Ears for coding agents: let AI hear, review and make sound. CPU-only, open source. | 15 Oct 2026 | [↗](https://github.com/Leonxlnx/earshot) |
-| **LTX 2.3 10Eros Image-to-Video** | ltx 2.3 improved image-to-video with 10eros & native audio | 15 Oct 2026 | [↗](https://huggingface.co/spaces/rdata92/LTX-2.3-10Eros) |
-| **Introducing Carbon-X** | The best open model for DNA understanding | 15 Oct 2026 | [↗](https://huggingface.co/spaces/HuggingFaceBio/Carbon-X-Release) |
-| **Speech to Decisions with Granite** | Live speech, heard and sized up by one Granite Switch model | 15 Oct 2026 | [↗](https://huggingface.co/spaces/ibm-granite/speech-to-decisions) |
-| **FLUX 3 Image Klein** | 5.6B open weights. Text-to-image, editing, bounding boxes | 14 Oct 2026 | [↗](https://huggingface.co/spaces/black-forest-labs/flux-3-image-klein) |
-| **MOSS-Image Workflow** | MOSS-Image text-to-image as a gr.Workflow node canvas. | 14 Oct 2026 | [↗](https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image) |
-| **Articos MCP** | See how simulated buyers react, right in your agent | 13 Oct 2026 | [↗](https://www.producthunt.com/r/KE4OQDDO5PVYVA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Radar+%28ID%3A+310075%29) |
 
 ## Trending open-source AI
 
@@ -698,26 +688,26 @@ The most-starred AI projects on GitHub right now. [All open-source AI tools ↗]
 
 | # | Tool | What it does | Stars | |
 | --: | --- | --- | --- | :-: |
-| 1 | [**rea**](https://raunakpatil.com/ai-tools/tool/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | ★ 404,919 | [↗](https://github.com/morluto/rea) |
-| 2 | [**openclaw**](https://raunakpatil.com/ai-tools/tool/openclaw) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | ★ 393,323 | [↗](https://github.com/openclaw/openclaw) |
-| 3 | [**superpowers**](https://raunakpatil.com/ai-tools/tool/superpowers) | An agentic skills framework & software development methodology that works. | ★ 307,826 | [↗](https://github.com/obra/superpowers) |
-| 4 | [**ECC**](https://raunakpatil.com/ai-tools/tool/ecc) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code,… | ★ 292,123 | [↗](https://github.com/affaan-m/ECC) |
-| 5 | [**deepseek-harness**](https://raunakpatil.com/ai-tools/tool/deepseek-harness) | DeepSeek Harness: Everything is a Plugin. | ★ 265,393 | [↗](https://github.com/deepseek-ai/deepseek-harness) |
-| 6 | [**hermes-agent**](https://raunakpatil.com/ai-tools/tool/hermes-agent) | The agent that grows with you | ★ 258,324 | [↗](https://github.com/NousResearch/hermes-agent) |
-| 7 | [**markitdown**](https://raunakpatil.com/ai-tools/tool/markitdown) | Python tool for converting files and office documents to Markdown. | ★ 192,799 | [↗](https://github.com/microsoft/markitdown) |
-| 8 | [**AutoGPT**](https://raunakpatil.com/ai-tools/tool/autogpt) | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on… | ★ 187,810 | [↗](https://github.com/Significant-Gravitas/AutoGPT) |
-| 9 | [**ponytail**](https://raunakpatil.com/ai-tools/tool/ponytail) | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. | ★ 179,586 | [↗](https://github.com/DietrichGebert/ponytail) |
-| 10 | [**transformers**](https://raunakpatil.com/ai-tools/tool/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal… | ★ 168,328 | [↗](https://github.com/huggingface/transformers) |
-| 11 | **stable-diffusion-webui** | Stable Diffusion web UI | ★ 165,175 | [↗](https://github.com/AUTOMATIC1111/stable-diffusion-webui) |
-| 12 | [**cc-switch**](https://raunakpatil.com/ai-tools/tool/cc-switch) | A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official… | ★ 149,942 | [↗](https://github.com/farion1231/cc-switch) |
-| 13 | [**system-prompts-and-models-of-ai-tools**](https://raunakpatil.com/ai-tools/tool/system-prompts-and-models-of-ai-tools) | FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app,… | ★ 144,323 | [↗](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) |
-| 14 | [**spec-kit**](https://raunakpatil.com/ai-tools/tool/spec-kit) | 💫 Toolkit to help you get started with SDD or any other process! | ★ 143,783 | [↗](https://github.com/github/spec-kit) |
-| 15 | [**graphify**](https://raunakpatil.com/ai-tools/tool/graphify) | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code,… | ★ 138,182 | [↗](https://github.com/Graphify-Labs/graphify) |
-| 16 | [**ui**](https://raunakpatil.com/ai-tools/tool/ui) | Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make… | ★ 126,870 | [↗](https://github.com/shadcn-ui/ui) |
-| 17 | [**TradingAgents**](https://raunakpatil.com/ai-tools/tool/tradingagents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | ★ 118,084 | [↗](https://github.com/TauricResearch/TradingAgents) |
-| 18 | [**caveman**](https://raunakpatil.com/ai-tools/tool/caveman) | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. | ★ 115,912 | [↗](https://github.com/JuliusBrussee/caveman) |
-| 19 | [**supabase**](https://raunakpatil.com/ai-tools/tool/supabase) | The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications. | ★ 114,288 | [↗](https://github.com/supabase/supabase) |
-| 20 | [**orca**](https://raunakpatil.com/ai-tools/tool/orca) | Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription.… | ★ 109,561 | [↗](https://github.com/stablyai/orca) |
+| 1 | [**rea**](https://raunakpatil.com/ai-tools/tool/rea) | Reverse engineer anything with agents, from app behavior down to native binaries. | ★ 416,178 | [↗](https://github.com/morluto/rea) |
+| 2 | [**openclaw**](https://raunakpatil.com/ai-tools/tool/openclaw) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | ★ 393,588 | [↗](https://github.com/openclaw/openclaw) |
+| 3 | [**superpowers**](https://raunakpatil.com/ai-tools/tool/superpowers) | An agentic skills framework & software development methodology that works. | ★ 310,200 | [↗](https://github.com/obra/superpowers) |
+| 4 | [**ECC**](https://raunakpatil.com/ai-tools/tool/ecc) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code,… | ★ 294,220 | [↗](https://github.com/affaan-m/ECC) |
+| 5 | [**deepseek-harness**](https://raunakpatil.com/ai-tools/tool/deepseek-harness) | DeepSeek Harness: Everything is a Plugin. | ★ 267,654 | [↗](https://github.com/deepseek-ai/deepseek-harness) |
+| 6 | [**hermes-agent**](https://raunakpatil.com/ai-tools/tool/hermes-agent) | The agent that grows with you | ★ 259,257 | [↗](https://github.com/NousResearch/hermes-agent) |
+| 7 | [**markitdown**](https://raunakpatil.com/ai-tools/tool/markitdown) | Python tool for converting files and office documents to Markdown. | ★ 193,280 | [↗](https://github.com/microsoft/markitdown) |
+| 8 | [**AutoGPT**](https://raunakpatil.com/ai-tools/tool/autogpt) | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on… | ★ 187,852 | [↗](https://github.com/Significant-Gravitas/AutoGPT) |
+| 9 | [**ponytail**](https://raunakpatil.com/ai-tools/tool/ponytail) | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. | ★ 181,652 | [↗](https://github.com/DietrichGebert/ponytail) |
+| 10 | [**transformers**](https://raunakpatil.com/ai-tools/tool/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal… | ★ 168,400 | [↗](https://github.com/huggingface/transformers) |
+| 11 | **stable-diffusion-webui** | Stable Diffusion web UI | ★ 165,207 | [↗](https://github.com/AUTOMATIC1111/stable-diffusion-webui) |
+| 12 | [**cc-switch**](https://raunakpatil.com/ai-tools/tool/cc-switch) | A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io | ★ 150,704 | [↗](https://github.com/farion1231/cc-switch) |
+| 13 | [**spec-kit**](https://raunakpatil.com/ai-tools/tool/spec-kit) | 💫 Toolkit to help you get started with SDD or any other process! | ★ 144,538 | [↗](https://github.com/github/spec-kit) |
+| 14 | [**system-prompts-and-models-of-ai-tools**](https://raunakpatil.com/ai-tools/tool/system-prompts-and-models-of-ai-tools) | FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app,… | ★ 144,394 | [↗](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) |
+| 15 | [**graphify**](https://raunakpatil.com/ai-tools/tool/graphify) | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code,… | ★ 140,131 | [↗](https://github.com/Graphify-Labs/graphify) |
+| 16 | [**ui**](https://raunakpatil.com/ai-tools/tool/ui) | Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make… | ★ 127,081 | [↗](https://github.com/shadcn-ui/ui) |
+| 17 | [**TradingAgents**](https://raunakpatil.com/ai-tools/tool/tradingagents) | TradingAgents: Multi-Agents LLM Financial Trading Framework | ★ 119,135 | [↗](https://github.com/TauricResearch/TradingAgents) |
+| 18 | [**caveman**](https://raunakpatil.com/ai-tools/tool/caveman) | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. | ★ 116,568 | [↗](https://github.com/JuliusBrussee/caveman) |
+| 19 | [**supabase**](https://raunakpatil.com/ai-tools/tool/supabase) | The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications. | ★ 114,389 | [↗](https://github.com/supabase/supabase) |
+| 20 | [**orca**](https://raunakpatil.com/ai-tools/tool/orca) | Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription.… | ★ 111,870 | [↗](https://github.com/stablyai/orca) |
 
 ## Alternatives to popular AI tools
 
@@ -749,6 +739,6 @@ Everything in this list comes from [radar.json](https://raunakpatil.com/ai-tools
 
 <div align="center">
 
-Kept by [Raunak Patil](https://raunakpatil.com) · Last updated 29 October 2026 · [raunakpatil.com/radar](https://raunakpatil.com/radar)
+Kept by [Raunak Patil](https://raunakpatil.com) · Last updated 1 November 2026 · [raunakpatil.com/radar](https://raunakpatil.com/radar)
 
 </div>
