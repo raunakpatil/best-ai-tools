@@ -24,10 +24,16 @@ Rendered `renders/radar-launch.mp4`: 1920x1080, 30 fps, 43.6 s, H.264 + AAC.
   screen shorter than a full read. Both are kept on purpose: they are texture, the titles carry
   the read.
 - Frames checked at every beat and across every seam from the snapshots and the final MP4.
-- Audio measured, not heard: -16.4 LUFS integrated, true peak -1.5 dBTP, no clipping.
+- Audio measured, not heard: music + effects mastered to -13.9 LUFS integrated, true peak
+  -0.9 dBTP, no clipping (two-pass ffmpeg loudnorm on the rendered file, video stream copied).
 
 ## Weakest parts / next steps
-- No music bed: only sound effects (Pixabay licence, bundled with HyperFrames). A track is the
-  single biggest upgrade. Drop an mp3 in `assets/` and add an `<audio id="music">` in index.html.
+- Music: "Polished Hit" (supplied by the author), 120 BPM, 44.8 s. It starts 0.5 s into the
+  file so the full groove enters as the tabs collapse into the radar dot (7.75 s), the breakdown
+  sits under the end of the phones beat, and the drop lands on "More building." (36.5 s). The
+  synthetic riser was removed; the track builds on its own. Its natural tail rings out under
+  the end card (last 0.8 s are near silent).
+- Re-rendering: `npx hyperframes render -o renders/radar-launch.mp4 -q delivery`, then master:
+  `ffmpeg -i in.mp4 -c:v copy -af loudnorm=I=-14:TP=-1:LRA=11 -c:a aac -b:a 256k out.mp4`.
 - The tension beat (tabs) is typographic; an AI-generated shot of a person lost in tabs would
   make it human.
