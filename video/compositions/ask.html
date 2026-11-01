@@ -1,0 +1,303 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #ask-stage {
+      position: absolute;
+      inset: 0;
+    }
+    .ask-title {
+      position: absolute;
+      left: 180px;
+      top: 118px;
+      font-size: 96px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      color: var(--color-ink);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .ask-title span {
+      display: inline-block;
+      margin-right: 0.22em;
+      opacity: 0;
+    }
+    .ask-title .acc {
+      color: var(--ink-2);
+    }
+    #ask-bar {
+      position: absolute;
+      left: 180px;
+      top: 284px;
+      width: 1560px;
+      height: 112px;
+      border-radius: 56px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+    #ask-mag {
+      position: absolute;
+      left: 44px;
+      top: 36px;
+      width: 40px;
+      height: 40px;
+    }
+    #ask-ph,
+    #ask-typed {
+      position: absolute;
+      left: 108px;
+      top: 0;
+      height: 112px;
+      line-height: 112px;
+      font-size: 40px;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    #ask-ph {
+      color: #a1a1a6;
+    }
+    #ask-typed {
+      color: var(--color-ink);
+    }
+    #ask-typed span {
+      white-space: pre;
+    }
+    #ask-caret {
+      display: inline-block;
+      width: 3px;
+      height: 46px;
+      background: var(--color-ink);
+      vertical-align: middle;
+      margin-left: 2px;
+      opacity: 0;
+    }
+    #ask-btn {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    }
+    #ask-btn-fill {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--color-ink);
+      opacity: 0;
+    }
+    #ask-btn svg {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 36px;
+      height: 36px;
+    }
+    #ask-panel {
+      position: absolute;
+      left: 180px;
+      top: 432px;
+      width: 1560px;
+      height: 560px;
+      border-radius: 40px;
+      background: #ffffff;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+      clip-path: inset(0 0 100% 0 round 40px);
+    }
+    #ask-head {
+      position: absolute;
+      left: 48px;
+      top: 40px;
+      font-size: 30px;
+      color: #3a3a3c;
+      letter-spacing: -0.01em;
+      opacity: 0;
+    }
+    #ask-head b {
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+    #ask-cards {
+      position: absolute;
+      left: 48px;
+      top: 104px;
+      display: flex;
+      gap: 24px;
+    }
+    .ask-card {
+      width: 472px;
+      height: 316px;
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+      position: relative;
+      padding: 30px 30px 0 30px;
+      opacity: 0;
+    }
+    .ask-card .n {
+      position: absolute;
+      left: 30px;
+      top: 34px;
+      font-family: var(--font-mono);
+      font-size: 22px;
+      color: #8e8e93;
+    }
+    .ask-card img {
+      position: absolute;
+      left: 64px;
+      top: 26px;
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+    }
+    .ask-card h4 {
+      position: absolute;
+      left: 160px;
+      right: 24px;
+      top: 26px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--color-ink);
+      line-height: 1.12;
+    }
+    .ask-card p {
+      position: absolute;
+      left: 160px;
+      right: 26px;
+      top: 116px;
+      font-size: 26px;
+      line-height: 1.38;
+      color: #48484a;
+    }
+    .ask-card .tag {
+      position: absolute;
+      left: 160px;
+      bottom: 26px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      color: #8e8e93;
+    }
+    #ask-foot {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      top: 462px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 26px;
+      color: #6e6e73;
+      opacity: 0;
+    }
+    #ask-foot span {
+      padding: 14px 26px;
+      border-radius: 32px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      color: var(--color-ink);
+    }
+    #ask-cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 58px;
+      height: 58px;
+      z-index: 10;
+    }
+    #ask-flood {
+      position: absolute;
+      inset: 0;
+      background: var(--color-dark);
+      opacity: 0;
+    }
+  </style>
+  <div id="root" data-composition-id="ask" data-width="1920" data-height="1080">
+    <div id="ask-stage" data-layout-allow-overflow>
+      <div class="ask-title" id="ask-t1"><span>Ask</span><span>in</span><span>plain</span><span>words.</span></div>
+      <div class="ask-title" id="ask-t2"><span>Get</span><span>the</span><span>tools</span><span>that</span><span>fit.</span></div>
+
+      <div id="ask-bar">
+        <svg id="ask-mag" viewBox="0 0 24 24" fill="none" stroke="#6e6e73" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+        <div id="ask-ph">Search 6,436 AI tools, or ask Radar</div>
+        <div id="ask-typed"></div>
+        <div id="ask-btn">
+          <div id="ask-btn-fill"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><g id="ask-icon" stroke="#6e6e73"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 18 6"/></g></svg>
+        </div>
+      </div>
+
+      <div id="ask-panel">
+        <div id="ask-head"><b>Radar</b> suggests, for “turn my podcast into short clips”</div>
+        <div id="ask-cards">
+          <div class="ask-card" id="ask-c1"><span class="n">1</span><img src="assets/ui/logo-opusclip.png" alt=""><h4>OpusClip</h4><p>Extracts the best moments from long videos and converts…</p><span class="tag">VIDEO · FREEMIUM</span></div>
+          <div class="ask-card" id="ask-c2"><span class="n">2</span><img src="assets/ui/logo-vizard.png" alt=""><h4>Vizard</h4><p>Automatically cuts long podcast videos into social-ready short clips…</p><span class="tag">VIDEO · FREEMIUM</span></div>
+          <div class="ask-card" id="ask-c3"><span class="n">3</span><img src="assets/ui/logo-ytshorts.png" alt=""><h4>AI-Youtube-Shorts-Generator</h4><p>Open-source tool to turn long YouTube podcast videos…</p><span class="tag">VIDEO · OPEN SOURCE</span></div>
+        </div>
+        <div id="ask-foot">Not quite it? Add a detail and Radar will look again.<span>118 more related tools below ↓</span></div>
+      </div>
+
+      <svg id="ask-cursor" viewBox="0 0 32 32"><path d="M6 3 L6 25 L11.5 19.8 L15.2 28 L19 26.3 L15.4 18.3 L23 18.3 Z" fill="#111" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+    </div>
+    <div id="ask-flood"></div>
+  </div>
+  <script>
+    (function () {
+      const q = "turn my podcast into short clips";
+      const typed = document.getElementById("ask-typed");
+      typed.innerHTML = '<span id="ask-txt"></span><i id="ask-caret"></i>';
+      const txt = document.getElementById("ask-txt");
+
+      const tl = gsap.timeline({ paused: true });
+      // Arrives out of the zoom-through: slightly large, settles.
+      tl.fromTo("#ask-stage", { scale: 1.12, filter: "blur(12px)", opacity: 0 }, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.6, ease: "expo.out" }, 0);
+      tl.fromTo("#ask-t1 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 0.3);
+
+      // Typing.
+      const T = 0.85, CH = 0.048;
+      tl.fromTo("#ask-caret", { opacity: 0 }, { opacity: 1, duration: 0.01 }, T - 0.05);
+      tl.to("#ask-ph", { opacity: 0, duration: 0.01 }, T);
+      // Characters shown are a pure function of time, so the caret follows the text.
+      const ty = { n: 0 };
+      tl.fromTo(ty, { n: 0 }, { n: q.length, duration: q.length * CH, ease: "none",
+        onUpdate: () => { txt.textContent = q.slice(0, Math.floor(ty.n + 0.0001)); } }, T);
+
+      // The cursor comes in from off-screen and clicks Ask.
+      const bx = 180 + 1560 - 20 - 38, by = 284 + 18 + 38;
+      tl.fromTo("#ask-cursor", { x: 1980, y: 1130 }, { x: bx - 8, y: by - 6, duration: 0.7, ease: "power3.out" }, 2.25);
+      tl.to("#ask-cursor", { scale: 0.82, duration: 0.07, ease: "power2.in", transformOrigin: "20% 10%" }, 3.0);
+      tl.to("#ask-cursor", { scale: 1, duration: 0.16, ease: "power2.out" }, 3.07);
+      tl.fromTo("#ask-btn", { scale: 1 }, { scale: 0.9, duration: 0.07, ease: "power2.in" }, 3.0);
+      tl.to("#ask-btn", { scale: 1, duration: 0.25, ease: "back.out(2)" }, 3.07);
+      tl.fromTo("#ask-btn-fill", { opacity: 0 }, { opacity: 1, duration: 0.08 }, 3.03);
+      tl.fromTo("#ask-icon", { stroke: "#6e6e73" }, { stroke: "#ffffff", duration: 0.08 }, 3.03);
+      tl.to("#ask-caret", { opacity: 0, duration: 0.01 }, 3.05);
+
+      // The answer opens out of the bar.
+      tl.fromTo("#ask-panel", { clipPath: "inset(0% 0% 100% 0% round 40px)" }, { clipPath: "inset(0% 0% 0% 0% round 40px)", duration: 0.6, ease: "expo.out" }, 3.1);
+      tl.fromTo("#ask-head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power3.out" }, 3.25);
+      tl.fromTo(".ask-card", { opacity: 0, scale: 0.94, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", stagger: 0.09 }, 3.35);
+      tl.fromTo("#ask-foot", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 3.8);
+      tl.to("#ask-cursor", { x: 1990, y: 1150, duration: 0.5, ease: "power3.in" }, 3.6);
+
+      // Title changes to the result.
+      tl.to("#ask-t1 span", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power2.in", stagger: 0.03 }, 4.25);
+      tl.fromTo("#ask-t2 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 4.45);
+
+      // Flood to the dark world.
+      tl.to("#ask-stage", { y: -160, opacity: 0, filter: "blur(12px)", duration: 0.4, ease: "power3.in" }, 7.05);
+      tl.fromTo("#ask-flood", { opacity: 0 }, { opacity: 1, duration: 0.42, ease: "power2.inOut" }, 7.1);
+
+      window.__timelines["ask"] = tl;
+    })();
+  </script>
+</template>

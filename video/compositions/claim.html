@@ -1,0 +1,54 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #f2f2f2;
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #cl-flood {
+      position: absolute;
+      inset: 0;
+      background: var(--color-accent);
+      clip-path: circle(0px at 960px 1080px);
+    }
+    .cl-line {
+      position: absolute;
+      left: 160px;
+      font-size: 190px;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      color: #ffffff;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .cl-line span {
+      display: inline-block;
+      margin-right: 0.2em;
+      opacity: 0;
+    }
+    #cl-l1 {
+      top: 300px;
+      color: #ffe3cf;
+    }
+    #cl-l2 {
+      top: 530px;
+    }
+  </style>
+  <div id="root" data-composition-id="claim" data-width="1920" data-height="1080">
+    <div id="cl-flood"></div>
+    <div class="cl-line" id="cl-l1"><span>Less</span><span>searching.</span></div>
+    <div class="cl-line" id="cl-l2"><span>More</span><span>building.</span></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#cl-flood", { clipPath: "circle(0px at 960px 1080px)" }, { clipPath: "circle(2300px at 960px 1080px)", duration: 0.5, ease: "power2.inOut" }, 0);
+      tl.fromTo("#cl-l1 span", { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out", stagger: 0.1 }, 0.38);
+      tl.fromTo("#cl-l2 span", { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out", stagger: 0.1 }, 0.95);
+      tl.to(".cl-line span", { opacity: 0, filter: "blur(10px)", duration: 0.16, ease: "power2.in", stagger: 0.03 }, 2.12);
+      window.__timelines["claim"] = tl;
+    })();
+  </script>
+</template>

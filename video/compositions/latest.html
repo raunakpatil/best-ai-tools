@@ -1,0 +1,216 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-dark);
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #lt-cam {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1900px;
+    }
+    .lt-title {
+      position: absolute;
+      left: 120px;
+      font-size: 96px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      color: #f5f5f7;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .lt-title span {
+      display: inline-block;
+      margin-right: 0.22em;
+      opacity: 0;
+    }
+    .lt-title .g {
+      color: #86868b;
+    }
+    #lt-hero {
+      position: absolute;
+      left: 120px;
+      top: 290px;
+      width: 724px;
+      height: 468px;
+      border-radius: 32px;
+      overflow: hidden;
+      opacity: 0;
+    }
+    #lt-hero img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    #lt-panel {
+      position: absolute;
+      left: 876px;
+      top: 290px;
+      width: 924px;
+      height: 468px;
+      border-radius: 32px;
+      background: #fafafa;
+      overflow: hidden;
+      opacity: 0;
+    }
+    #lt-panel-h {
+      position: absolute;
+      left: 34px;
+      top: 26px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      letter-spacing: 0.14em;
+      color: #6e6e73;
+    }
+    .lt-row {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
+      opacity: 0;
+    }
+    .lt-row .t {
+      width: 52px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      color: #8e8e93;
+      text-align: right;
+    }
+    .lt-row img {
+      width: 84px;
+      height: 61px;
+      border-radius: 10px;
+      flex: none;
+    }
+    .lt-row .h {
+      flex: 1;
+      font-size: 26px;
+      color: #1d1d1f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: -0.01em;
+    }
+    .lt-row .s {
+      width: 168px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      color: #8e8e93;
+      text-align: right;
+    }
+    #lt-models {
+      position: absolute;
+      left: 120px;
+      top: 910px;
+      width: 1680px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .lt-m {
+      height: 300px;
+      border-radius: 30px;
+      position: relative;
+      padding: 32px 34px;
+      color: #fff;
+      opacity: 0;
+    }
+    .lt-m .org {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      letter-spacing: 0.14em;
+      opacity: 0.6;
+    }
+    .lt-m .no {
+      position: absolute;
+      right: 34px;
+      top: 32px;
+      font-family: var(--font-mono);
+      font-size: 22px;
+    }
+    .lt-m .nm {
+      margin-top: 22px;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .lt-m .tag {
+      position: absolute;
+      left: 34px;
+      bottom: 32px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 22px;
+    }
+    .lt-m .st {
+      position: absolute;
+      right: 34px;
+      bottom: 40px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      opacity: 0.7;
+    }
+    #lt-flood {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      opacity: 0;
+    }
+  </style>
+  <div id="root" data-composition-id="latest" data-width="1920" data-height="1080">
+    <div id="lt-cam" data-layout-allow-overflow>
+      <div class="lt-title" id="lt-t1" style="top:118px"><span>Headlines</span><span>from</span><span class="g">nine</span><span class="g">sources.</span></div>
+      <div id="lt-hero"><img src="assets/ui/news-hero.png" alt=""></div>
+      <div id="lt-panel">
+        <div id="lt-panel-h">HEADLINES</div>
+        <div class="lt-row" id="lt-r1" style="top:66px"><span class="t">29m</span><img src="assets/ui/thumb-1.png" alt=""><span class="h">AI agents have bad taste in long-term decisions and a new benchmark proves it</span><span class="s">THE DECODER</span></div>
+        <div class="lt-row" id="lt-r2" style="top:146px"><span class="t">1h</span><img src="assets/ui/thumb-2.png" alt=""><span class="h">AI agents chasing a $465 train refund invented excuses, leaked medical data</span><span class="s">THE DECODER</span></div>
+        <div class="lt-row" id="lt-r3" style="top:226px"><span class="t">12h</span><img src="assets/ui/thumb-3.png" alt=""><span class="h">Meta removes language that raised scraping and AI training concerns</span><span class="s">TECHCRUNCH</span></div>
+        <div class="lt-row" id="lt-r4" style="top:306px"><span class="t">13h</span><img src="assets/ui/thumb-4.png" alt=""><span class="h">Anthropic says its workforce has become less junior</span><span class="s">TECHCRUNCH</span></div>
+        <div class="lt-row" id="lt-r5" style="top:386px"><span class="t">15h</span><img src="assets/ui/thumb-5.png" alt=""><span class="h">Replit makes OpenAI its default over Anthropic, CEO says</span><span class="s">TECHCRUNCH</span></div>
+      </div>
+
+      <div class="lt-title" id="lt-t2" style="top:760px"><span>Open</span><span>models</span><span>trending</span><span class="g">this</span><span class="g">week.</span></div>
+      <div id="lt-models">
+        <div class="lt-m" style="background:linear-gradient(135deg,#3a4520,#1d2112)"><div class="org">DEEPSEEK</div><div class="no" style="color:#d4f06a">01</div><div class="nm">DeepSeek-V4.1-Flash-1017</div><div class="tag" style="color:#d4f06a">Vision + language</div><div class="st">♥ 1.1k</div></div>
+        <div class="lt-m" style="background:linear-gradient(135deg,#43331a,#21190f)"><div class="org">GOOGLE</div><div class="no" style="color:#f0c050">02</div><div class="nm">embeddinggemma-2</div><div class="tag" style="color:#f0c050">Embeddings</div><div class="st">♥ 2.6k&nbsp;&nbsp;↓ 158k</div></div>
+        <div class="lt-m" style="background:linear-gradient(135deg,#46221a,#22120f)"><div class="org">OPENBMB</div><div class="no" style="color:#ff9070">03</div><div class="nm">MiniCPM-V-4.7-35B-A3B</div><div class="tag" style="color:#ff9070">Vision + language</div><div class="st">♥ 908&nbsp;&nbsp;↓ 36k</div></div>
+        <div class="lt-m" style="background:linear-gradient(135deg,#46203a,#22101d)"><div class="org">BLACK FOREST LABS</div><div class="no" style="color:#ff80c0">04</div><div class="nm">flux-3-image-klein-comfy</div><div class="tag" style="color:#ff80c0">Image editing</div><div class="st">♥ 708&nbsp;&nbsp;↓ 224k</div></div>
+        <div class="lt-m" style="background:linear-gradient(135deg,#3a1d48,#1c0f24)"><div class="org">LIGHTRICKS</div><div class="no" style="color:#de80ff">05</div><div class="nm">LTX-2.5</div><div class="tag" style="color:#de80ff">Video</div><div class="st">♥ 8.3k&nbsp;&nbsp;↓ 2M</div></div>
+        <div class="lt-m" style="background:linear-gradient(135deg,#2a1f4a,#141026)"><div class="org">LIQUID AI</div><div class="no" style="color:#a898ff">06</div><div class="nm">LFM2.5-24B-A2B</div><div class="tag" style="color:#a898ff">Language</div><div class="st">♥ 452</div></div>
+      </div>
+    </div>
+    <div id="lt-flood"></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#lt-t1 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 0.1);
+      tl.fromTo("#lt-hero", { opacity: 0, scale: 1.06, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "expo.out" }, 0.35);
+      tl.fromTo("#lt-panel", { opacity: 0, x: 120, filter: "blur(10px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 0.5);
+      tl.fromTo(".lt-row", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out", stagger: 0.11 }, 0.8);
+
+      // Camera rises to the trending models.
+      tl.to("#lt-cam", { y: -640, duration: 0.65, ease: "power2.inOut" }, 2.75);
+      tl.to(["#lt-t1", "#lt-hero", "#lt-panel"], { opacity: 0, filter: "blur(10px)", duration: 0.4, ease: "power2.in" }, 2.75);
+      tl.fromTo("#lt-t2 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 3.2);
+      tl.fromTo(".lt-m", { opacity: 0, scale: 0.9, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out", stagger: 0.07 }, 3.05);
+
+      // Flood back to light.
+      tl.fromTo("#lt-flood", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 5.38);
+
+      window.__timelines["latest"] = tl;
+    })();
+  </script>
+</template>

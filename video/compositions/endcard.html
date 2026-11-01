@@ -1,0 +1,123 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #f2f2f2;
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #ec-disc {
+      position: absolute;
+      inset: 0;
+      background: var(--color-accent);
+      clip-path: circle(1300px at 700px 450px);
+    }
+    #ec-mark {
+      position: absolute;
+      left: 600px;
+      top: 350px;
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+    #ec-sweep {
+      transform-origin: 100px 100px;
+    }
+    #ec-word {
+      position: absolute;
+      left: 842px;
+      top: 352px;
+      font-size: 196px;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      line-height: 1;
+      color: var(--color-ink);
+      clip-path: inset(0 100% 0 0);
+    }
+    #ec-btn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 640px;
+      display: flex;
+      justify-content: center;
+    }
+    #ec-pill {
+      position: relative;
+      padding: 30px 54px;
+      border-radius: 60px;
+      background: var(--color-ink);
+      color: #fff;
+      font-size: 46px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      opacity: 0;
+    }
+    #ec-pill-fill {
+      position: absolute;
+      inset: 0;
+      border-radius: 60px;
+      background: var(--color-accent);
+      opacity: 0;
+    }
+    #ec-pill span {
+      position: relative;
+    }
+    #ec-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 800px;
+      text-align: center;
+      font-size: 34px;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
+      opacity: 0;
+    }
+    #ec-cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 62px;
+      height: 62px;
+      z-index: 10;
+    }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <div id="ec-disc"></div>
+    <svg id="ec-mark" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="5">
+      <circle cx="100" cy="100" r="62" opacity="0.55"/>
+      <circle cx="100" cy="100" r="30" opacity="0.55"/>
+      <g id="ec-sweep"><path d="M100 100 L100 8" stroke-width="6" stroke-linecap="round"/></g>
+      <circle cx="100" cy="100" r="8" fill="#fff" stroke="none"/>
+    </svg>
+    <div id="ec-word">Radar</div>
+    <div id="ec-btn"><div id="ec-pill"><div id="ec-pill-fill"></div><span>raunakpatil.com/radar&nbsp;&nbsp;↗</span></div></div>
+    <div id="ec-line">6,436 AI tools. Updated every week.</div>
+    <svg id="ec-cursor" viewBox="0 0 32 32"><path d="M6 3 L6 25 L11.5 19.8 L15.2 28 L19 26.3 L15.4 18.3 L23 18.3 Z" fill="#111" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // The orange world closes into the mark.
+      tl.fromTo("#ec-disc", { clipPath: "circle(1300px at 700px 450px)" }, { clipPath: "circle(100px at 700px 450px)", duration: 0.6, ease: "power3.inOut" }, 0);
+      tl.fromTo("#ec-mark", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.5);
+      tl.fromTo("#ec-sweep", { rotation: -90 }, { rotation: 270 + 45, duration: 1.6, ease: "power3.out" }, 0.5);
+      tl.fromTo("#ec-word", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6, ease: "expo.out" }, 0.7);
+      tl.fromTo("#ec-word", { x: -40 }, { x: 0, duration: 0.6, ease: "expo.out" }, 0.7);
+
+      // Call to action, then the click.
+      tl.fromTo("#ec-pill", { opacity: 0, scale: 0.85, filter: "blur(8px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 1.25);
+      tl.fromTo("#ec-cursor", { x: 1500, y: 1140 }, { x: 1180, y: 700, duration: 0.7, ease: "power3.out" }, 1.85);
+      tl.to("#ec-cursor", { scale: 0.82, duration: 0.07, ease: "power2.in", transformOrigin: "20% 10%" }, 2.55);
+      tl.to("#ec-cursor", { scale: 1, duration: 0.15, ease: "power2.out" }, 2.62);
+      tl.to("#ec-pill", { scale: 0.95, duration: 0.07, ease: "power2.in" }, 2.55);
+      tl.to("#ec-pill", { scale: 1, duration: 0.3, ease: "back.out(2)" }, 2.62);
+      tl.fromTo("#ec-pill-fill", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 2.58);
+      tl.to("#ec-cursor", { x: 1560, y: 1160, duration: 0.5, ease: "power3.in" }, 3.1);
+      tl.fromTo("#ec-line", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, 2.95);
+      window.__timelines["endcard"] = tl;
+    })();
+  </script>
+</template>

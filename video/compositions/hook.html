@@ -1,0 +1,143 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #hook-stage {
+      position: absolute;
+      inset: 0;
+    }
+    #hook-rows {
+      position: absolute;
+      inset: -20px 0 0 0;
+    }
+    .hook-row {
+      height: 136px;
+      white-space: nowrap;
+      font-size: 96px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 136px;
+      color: #d9d9dc;
+      will-change: transform;
+    }
+    .hook-row span {
+      margin-right: 64px;
+    }
+    .hook-row span.d {
+      color: #c4c4c8;
+    }
+    #hook-veil {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 1250px 560px at 50% 50%, rgba(242, 242, 242, 1) 48%, rgba(242, 242, 242, 0) 100%);
+      opacity: 1;
+    }
+    #hook-counter {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 330px;
+      text-align: center;
+    }
+    #hook-num {
+      font-size: 300px;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      color: var(--color-ink);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    #hook-label {
+      margin-top: 28px;
+      font-family: var(--font-mono);
+      font-size: 30px;
+      letter-spacing: 0.16em;
+      color: var(--ink-2);
+      text-transform: uppercase;
+    }
+    #hook-q {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 455px;
+      text-align: center;
+      font-size: 150px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      color: var(--color-ink);
+      line-height: 1;
+    }
+    #hook-q span {
+      display: inline-block;
+      margin: 0 0.12em;
+      opacity: 0;
+    }
+    #hook-q .acc {
+      color: var(--color-accent);
+    }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <div id="hook-stage" data-layout-allow-overflow>
+      <div id="hook-rows" data-layout-ignore data-motion-blur="off"></div>
+      <div id="hook-veil" data-layout-ignore></div>
+      <div id="hook-counter">
+        <div id="hook-num">1,204</div>
+        <div id="hook-label">AI tools out there</div>
+      </div>
+      <div id="hook-q"><span>Which</span><span>one</span><span>is</span><span class="acc">yours?</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      // Real tool names from Radar's lists (README). Deterministic layout, no randomness.
+      const names = ["ChatGPT","Claude","Gemini","Grok","Copilot","DeepSeek","Perplexity","NotebookLM","Claude Code","Cursor","GitHub Copilot","Codex","Windsurf","Antigravity","Replit","Lovable","Bolt","v0","n8n","Midjourney","Ideogram","FLUX","Firefly","Krea","ComfyUI","Runway","Veo","Sora","Kling","HeyGen","Descript","OpusClip","ElevenLabs","Kokoro","Whisper","Wispr Flow","Suno","Udio","Gamma","Notion AI","Granola","Figma","Canva","Hugging Face","Ollama","LangChain","Vizard","Luma","Podcastify","Speechify","markitdown","AutoGPT","transformers","supabase","spec-kit","hermes-agent","openclaw","graphify"];
+      const rowsEl = document.getElementById("hook-rows");
+      const ROWS = 8;
+      for (let r = 0; r < ROWS; r++) {
+        const row = document.createElement("div");
+        row.className = "hook-row";
+        row.id = "hook-row-" + r;
+        let html = "";
+        for (let k = 0; k < 22; k++) {
+          const n = names[(r * 7 + k * 3) % names.length];
+          html += '<span class="' + ((r + k) % 5 === 0 ? "d" : "") + '">' + n + "</span>";
+        }
+        row.innerHTML = html;
+        rowsEl.appendChild(row);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Rows stream at constant speed, alternating direction; they accelerate into the whip.
+      for (let r = 0; r < ROWS; r++) {
+        const dir = r % 2 === 0 ? -1 : 1;
+        const speed = 260 + ((r * 97) % 5) * 70; // px per second
+        const start = dir < 0 ? -200 - r * 90 : -2400 + r * 60;
+        tl.fromTo("#hook-row-" + r, { x: start }, { x: start + dir * speed * 4.2, duration: 4.2, ease: "none" }, 0);
+      }
+
+      // Counter races up, lands on the real number.
+      const num = document.getElementById("hook-num");
+      const counter = { v: 1204 };
+      tl.fromTo(counter, { v: 1204 }, {
+        v: 6436, duration: 1.45, ease: "power3.out",
+        onUpdate: () => { num.textContent = Math.round(counter.v).toLocaleString("en-US"); }
+      }, 0);
+
+      // Counter blurs out, question lands word by word.
+      tl.to("#hook-counter", { opacity: 0, filter: "blur(10px)", duration: 0.2, ease: "power2.in" }, 2.0);
+      tl.fromTo("#hook-q span", { opacity: 0, filter: "blur(10px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 2.2);
+
+      // Whip left into the next world.
+      tl.to("#hook-stage", { x: -1100, filter: "blur(18px)", duration: 0.32, ease: "power3.in" }, 3.88);
+
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

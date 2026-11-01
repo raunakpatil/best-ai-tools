@@ -1,0 +1,213 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      overflow: hidden;
+      font-family: var(--font-display);
+    }
+    #tabs-win {
+      position: absolute;
+      left: 80px;
+      top: 90px;
+      width: 1760px;
+      height: 900px;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transform-origin: 50% 50%;
+    }
+    #tabs-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 96px;
+      background: #e9e9ea;
+      overflow: hidden;
+    }
+    #tabs-dots {
+      position: absolute;
+      left: 30px;
+      top: 38px;
+      display: flex;
+      gap: 12px;
+      z-index: 3;
+    }
+    #tabs-dots i {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #cfcfd2;
+      display: block;
+    }
+    #tabs-dots-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130px;
+      height: 96px;
+      background: #e9e9ea;
+      z-index: 2;
+    }
+    #tabs-strip {
+      position: absolute;
+      left: 140px;
+      top: 22px;
+      display: flex;
+      gap: 6px;
+    }
+    .tab {
+      flex: none;
+      width: 250px;
+      height: 74px;
+      border-radius: 16px 16px 0 0;
+      background: #f7f7f8;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 18px;
+      font-size: 22px;
+      color: #3a3a3c;
+      white-space: nowrap;
+      overflow: hidden;
+      transform-origin: 0 100%;
+      opacity: 0;
+    }
+    .tab b {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #d4d4d8;
+    }
+    #tabs-count {
+      position: absolute;
+      right: 26px;
+      top: 26px;
+      min-width: 92px;
+      height: 46px;
+      padding: 0 16px;
+      border-radius: 12px;
+      background: #111;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 24px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    #tabs-url {
+      position: absolute;
+      left: 40px;
+      right: 40px;
+      top: 116px;
+      height: 58px;
+      border-radius: 29px;
+      background: #f2f2f2;
+      font-size: 24px;
+      color: #8e8e93;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+    }
+    #tabs-lines {
+      position: absolute;
+      left: 120px;
+      top: 330px;
+    }
+    .tabs-line {
+      font-size: 120px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      color: var(--color-ink);
+      line-height: 1.08;
+    }
+    .tabs-line.g {
+      color: #a1a1a6;
+    }
+    .tabs-line span {
+      display: inline-block;
+      margin-right: 0.22em;
+      opacity: 0;
+    }
+    #tabs-dot {
+      position: absolute;
+      left: 948px;
+      top: 528px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-ink);
+      opacity: 0;
+    }
+  </style>
+  <div id="root" data-composition-id="tabs" data-width="1920" data-height="1080">
+    <div id="tabs-win" data-layout-allow-overflow>
+      <div id="tabs-bar">
+        <div id="tabs-dots-bg"></div>
+        <div id="tabs-dots"><i></i><i></i><i></i></div>
+        <div id="tabs-strip" data-layout-ignore></div>
+        <div id="tabs-count">1</div>
+      </div>
+      <div id="tabs-url">best ai tool for turning a podcast into clips</div>
+      <div id="tabs-lines">
+        <div class="tabs-line" id="tabs-l1"><span>Forty</span><span>tabs</span><span>later.</span></div>
+        <div class="tabs-line g" id="tabs-l2"><span>Still</span><span>guessing.</span></div>
+      </div>
+    </div>
+    <div id="tabs-dot"></div>
+  </div>
+  <script>
+    (function () {
+      const titles = ["Top 10 AI tools in 2026","best ai video tool reddit","ChatGPT vs Claude vs Gemini","OpusClip alternatives","Is Kling free?","AI tools list (updated?)","Vizard review","500+ AI tools you need","Descript pricing","free AI clip maker","Runway vs Sora","which AI tool should I use","Product Hunt: AI","AI tools directory","podcast to shorts AI","HeyGen alternatives"];
+      const strip = document.getElementById("tabs-strip");
+      const N = 40;
+      for (let i = 0; i < N; i++) {
+        const t = document.createElement("div");
+        t.className = "tab";
+        t.id = "tabs-t" + i;
+        t.innerHTML = "<b></b>" + titles[i % titles.length];
+        strip.appendChild(t);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      // Arrive from the right, matching the hook's whip.
+      tl.fromTo("#tabs-win", { x: 900, filter: "blur(16px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0);
+
+      // Tabs open faster and faster.
+      const count = document.getElementById("tabs-count");
+      const starts = [];
+      let t = 0.15;
+      for (let i = 0; i < N; i++) {
+        tl.fromTo("#tabs-t" + i, { opacity: 0, scaleX: 0.3 }, { opacity: 1, scaleX: 1, duration: 0.14, ease: "power3.out" }, t);
+        starts.push(t);
+        t += Math.max(0.035, 0.2 * Math.pow(0.86, i));
+      }
+      // Tab count is a pure function of timeline time, so any frame renders on its own.
+      const clock = { p: 0 };
+      tl.fromTo(clock, { p: 0 }, { p: 1, duration: 3.8, ease: "none", onUpdate: () => {
+        const now = tl.time();
+        let n = 0;
+        for (const s of starts) if (s <= now) n++;
+        count.textContent = String(Math.max(1, n));
+      } }, 0);
+      // The strip slides so the newest tab stays in view.
+      tl.fromTo("#tabs-strip", { x: 0 }, { x: -8400, duration: t - 0.9, ease: "power2.in" }, 0.9);
+
+      tl.fromTo("#tabs-l1 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 0.55);
+      tl.fromTo("#tabs-l2 span", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out", stagger: 0.08 }, 1.5);
+
+      // Everything collapses into one dot.
+      tl.to("#tabs-win", { scale: 0.012, borderRadius: 900, duration: 0.42, ease: "power3.in" }, 3.25);
+      tl.fromTo("#tabs-dot", { opacity: 0 }, { opacity: 1, duration: 0.05 }, 3.62);
+      tl.to("#tabs-win", { opacity: 0, duration: 0.05 }, 3.64);
+
+      window.__timelines["tabs"] = tl;
+    })();
+  </script>
+</template>
