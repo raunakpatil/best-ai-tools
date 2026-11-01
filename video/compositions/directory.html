@@ -165,8 +165,8 @@
   </style>
   <div id="root" data-composition-id="directory" data-width="1920" data-height="1080">
     <div id="dr-stage" data-layout-allow-overflow>
-      <div id="dr-title"><span>6,436</span><span>tools,</span><span class="g">ranked</span><span class="g">by</span><span class="g">category.</span></div>
-      <div id="dr-count">0 OF 6,436</div>
+      <div id="dr-title"><span>6,000+</span><span>tools,</span><span class="g">ranked</span><span class="g">by</span><span class="g">category.</span></div>
+      <div id="dr-count">0 TOOLS</div>
       <div id="dr-chips">
         <div class="dr-chip">Top 50 AI tools<small>Hand-picked right now</small></div>
         <div class="dr-chip">New releases<small>260 in the last 90 days</small></div>
@@ -202,7 +202,7 @@
       const cnt = document.getElementById("dr-count");
       const o = { v: 0 };
       tl.fromTo("#dr-count", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.45);
-      tl.fromTo(o, { v: 0 }, { v: 6436, duration: 1.1, ease: "power3.out", onUpdate: () => { cnt.textContent = Math.round(o.v).toLocaleString("en-US") + " OF 6,436"; } }, 0.45);
+      tl.fromTo(o, { v: 0 }, { v: 6000, duration: 1.1, ease: "power3.out", onUpdate: () => { const n = Math.round(o.v); cnt.textContent = n.toLocaleString("en-US") + (n >= 6000 ? "+ TOOLS · GROWING EVERY WEEK" : " TOOLS"); } }, 0.45);
       tl.fromTo(".dr-chip", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power3.out", stagger: 0.1 }, 0.9);
       tl.fromTo("#dr-badge", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 1.8);
 

@@ -25,7 +25,7 @@ MOTION:  arrivals expo.out / power4.out 0.5-0.9 s; camera and floods power2.inOu
          Render-time motion blur on.
 
 SHOTS:
-  0.0-4.2   Hook. Wall of real tool names streams in 8 rows; a counter races to 6,436;
+  0.0-4.2   Hook. Wall of real tool names streams in 8 rows; a counter races to 6,000+;
             "Which one is yours?" Whip left.
   4.2-8.0   Tension. A browser whose tabs keep multiplying; "Forty tabs later. Still guessing."
             The whole browser collapses to one dot.
@@ -36,7 +36,7 @@ SHOTS:
             Colour flood to dark.
   19.4-25.2 Proof 2, the latest. Headlines from nine sources roll in; camera rises to the
             trending open models. Flood back to light.
-  25.2-30.6 Proof 3, the directory. Card grid assembles; 6,436 of 6,436; the cursor picks Cursor,
+  25.2-30.6 Proof 3, the directory. Card grid assembles; 6,000+ and growing; the cursor picks Cursor,
             whose card grows into the next world.
   30.6-35.0 Payoff. Three phones rise; "Fresh every week."
   35.0-37.4 Claim. Orange flood. "Less searching. More building."
