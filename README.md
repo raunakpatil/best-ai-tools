@@ -15,6 +15,12 @@ Search them all, or describe what you need in plain words, on **[raunakpatil.com
 
 </div>
 
+
+
+https://github.com/user-attachments/assets/3af14c04-efb0-489e-865e-561b93b5edcd
+
+
+
 ## What Radar looks like
 
 **Ask Radar** in plain words, and it suggests the tools that fit, with a reason for each:
