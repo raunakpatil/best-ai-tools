@@ -1,0 +1,45 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    .fw-layer { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+    .fw-layer .kb { position: absolute; inset: 0; transform-origin: 50% 50%; }
+    .fw-layer img.full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+    .fw-shade { position: absolute; inset: 0; background: radial-gradient(ellipse 900px 380px at 50% 50%, rgba(11,8,7,.72) 0%, rgba(11,8,7,0) 100%); }
+    .fw-line { top: 488px; font-size: 104px; }
+    #fw-desk { width: 3840px; height: 2140px; left: 0; top: -200px; object-fit: cover; object-position: 0 0; }
+    #fw-screen { width: 384px; height: 848px; border-radius: 34px; }
+    #fw-l1 .w, #fw-l2 .w, #fw-l3 .w, #fw-l4 .w { opacity: 1; }
+  </style>
+  <div id="root" data-composition-id="fewer" data-width="1920" data-height="1080">
+    <div class="stage" id="fw-stage" data-layout-allow-overflow>
+      <div class="night"></div>
+      <div class="fw-layer" id="fw-a"><div class="kb"><img class="full" id="fw-desk" src="assets/photos/split.jpg" alt=""></div><div class="fw-shade"></div><div class="line fw-line" id="fw-l1"><span class="w">Fewer</span><span class="w">tabs.</span></div></div>
+      <div class="fw-layer" id="fw-b"><div class="kb"><img class="full" src="assets/photos/creator.jpg" alt="" style="object-position:70% 30%"></div><div class="fw-shade" style="background:linear-gradient(90deg,rgba(11,8,7,.85) 0%,rgba(11,8,7,.4) 45%,rgba(11,8,7,0) 65%)"></div><div class="line fw-line" id="fw-l2" style="left:120px;right:auto;text-align:left"><span class="w">Fewer</span><span class="w">guesses.</span></div></div>
+      <div class="fw-layer" id="fw-c"><div class="kb"><img class="full" src="assets/photos/flood.jpg" alt=""></div><div class="fw-shade" style="background:radial-gradient(ellipse 760px 300px at 50% 52%,rgba(11,8,7,.6),rgba(11,8,7,0))"></div><div class="line fw-line" id="fw-l3"><span class="w">Better</span><span class="w grad">picks.</span></div></div>
+      <div class="fw-layer" id="fw-d"><div class="kb" style="transform-origin:1380px 520px"><div class="photo"><img class="bgimg" src="assets/photos/phone.jpg" alt=""><div class="screen" id="fw-screen"><img src="assets/ui/mobile-radar.png" alt=""></div></div></div><div class="line fw-line ink" id="fw-l4" style="left:120px;right:auto;text-align:left"><span class="w">Fresh,</span><span class="w grad">every week.</span></div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      function quad(w, h, p) {
+        const [x0, y0] = p[0], [x1, y1] = p[1], [x2, y2] = p[2], [x3, y3] = p[3];
+        const dx1 = x1 - x2, dx2 = x3 - x2, dx3 = x0 - x1 + x2 - x3, dy1 = y1 - y2, dy2 = y3 - y2, dy3 = y0 - y1 + y2 - y3;
+        const den = dx1 * dy2 - dx2 * dy1, g = (dx3 * dy2 - dx2 * dy3) / den, k = (dx1 * dy3 - dx3 * dy1) / den;
+        const a = x1 - x0 + g * x1, b = x3 - x0 + k * x3, d = y1 - y0 + g * y1, e = y3 - y0 + k * y3;
+        return "matrix3d(" + [a / w, d / w, 0, g / w, b / h, e / h, 0, k / h, 0, 0, 1, 0, x0, y0, 0, 1].join(",") + ")";
+      }
+      document.getElementById("fw-screen").style.transform = quad(384, 848, [[1122, 198], [1382, 148], [1702, 842], [1440, 937]]);
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#fw-stage", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 0);
+      // Four beats, one line each, every world dissolving into the next through a blur.
+      const beats = [["#fw-a", 0, 1.55], ["#fw-b", 1.45, 1.55], ["#fw-c", 2.9, 1.55], ["#fw-d", 4.35, 1.75]];
+      beats.forEach(([id, at, dur], i) => {
+        tl.fromTo(id, { opacity: 0, filter: "blur(18px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power2.out" }, at);
+        tl.fromTo(id + " .kb", { scale: 1.12 }, { scale: 1.0, duration: dur + 0.4, ease: "none" }, at);
+        tl.fromTo(id + " .line", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, at + 0.2);
+        if (i < beats.length - 1) tl.to(id + " .line", { opacity: 0, filter: "blur(10px)", duration: 0.2, ease: "power2.in" }, at + dur - 0.2);
+      });
+      window.__timelines["fewer"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,52 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #gd-persp { position: absolute; inset: 0; perspective: 1800px; perspective-origin: 50% 40%; }
+    #gd-plane { position: absolute; left: 160px; top: -80px; width: 1700px; transform-style: preserve-3d; display: grid; grid-template-columns: repeat(4, 400px); gap: 26px; }
+    .gd-card { height: 250px; border-radius: 28px; background: rgba(255,255,255,.95); position: relative; box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+    .gd-card img { position: absolute; left: 26px; top: 24px; width: 76px; height: 76px; border-radius: 18px; }
+    .gd-card h4 { position: absolute; left: 28px; top: 118px; font-size: 34px; font-weight: 600; letter-spacing: -0.03em; color: #111; }
+    .gd-card p { position: absolute; left: 28px; right: 22px; top: 164px; font-size: 22px; line-height: 1.35; color: #555; }
+    .gd-card .b { position: absolute; right: 22px; top: 28px; padding: 7px 14px; border-radius: 12px; background: var(--color-accent); color: #2a1200; font-size: 19px; font-weight: 700; }
+    #gd-vig { position: absolute; inset: 0; background: radial-gradient(ellipse 820px 400px at 50% 52%, rgba(11,8,7,.92) 0%, rgba(11,8,7,.72) 55%, rgba(11,8,7,0) 100%); }
+    #gd-l1 { top: 420px; }
+    #gd-l2 { top: 530px; }
+    #gd-chips { position: absolute; left: 0; right: 0; top: 670px; display: flex; justify-content: center; gap: 16px; }
+    .gd-chip { padding: 14px 28px; border-radius: 30px; font-size: 30px; color: var(--cream); opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="grid" data-width="1920" data-height="1080">
+    <div class="stage" id="gd-stage" data-layout-allow-overflow>
+      <div class="night"></div>
+      <div id="gd-persp" data-layout-ignore><div id="gd-plane"></div></div>
+      <div id="gd-vig"></div>
+      <div class="line" id="gd-l1"><span class="w grad">6,000+</span><span class="w">tools,</span></div>
+      <div class="line" id="gd-l2"><span class="w">ranked</span><span class="w">by</span><span class="w">category.</span></div>
+      <div id="gd-chips"><div class="gd-chip glass">Top 50</div><div class="gd-chip glass">New releases</div><div class="gd-chip glass">Free</div><div class="gd-chip glass">Open source</div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tools = [
+        ["dir-logo-1","ChatGPT","OpenAI's everyday assistant"],["dir-logo-2","Claude","Careful writing, long documents"],["dir-logo-3","Gemini","Plugged into Search, Gmail, Docs",1],["dir-logo-4","Grok","What people post on X, in reach"],
+        ["dir-logo-5","Microsoft Copilot","Across Windows, Edge and Office"],["dir-logo-6","DeepSeek","Open-weight reasoning models"],["dir-logo-7","Perplexity","Answers from the web, cited"],["dir-logo-8","NotebookLM","Question your own documents"],
+        ["dir-logo-9","Claude Code","An agent in your terminal"],["dir-logo-10","Cursor","A code editor built around AI"],["dir-logo-11","GitHub Copilot","A coding agent in your editor"],["dir-logo-12","Codex","OpenAI's coding agent"],
+        ["logo-opusclip","OpusClip","Long videos into vertical shorts"],["logo-vizard","Vizard","Podcasts into social clips"],["logo-ytshorts","AI-Youtube-Shorts","Open-source shorts maker"],["dir-logo-3","Gemini","Google's assistant"]
+      ];
+      const plane = document.getElementById("gd-plane");
+      for (let rep = 0; rep < 2; rep++) tools.forEach((t, i) => {
+        const c = document.createElement("div");
+        c.className = "gd-card";
+        c.innerHTML = '<img src="assets/ui/' + t[0] + '.png" alt="">' + (t[3] && rep === 0 ? '<span class="b">In Raunak\'s stack</span>' : "") + "<h4>" + t[1] + "</h4><p>" + t[2] + "</p>";
+        plane.appendChild(c);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#gd-stage", { opacity: 0, filter: "blur(18px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+      // A tilted wall of real tool cards drifting past at constant speed.
+      tl.fromTo("#gd-plane", { rotationX: 48, rotationZ: -16, y: 120, x: 40 }, { rotationX: 42, rotationZ: -12, y: -700, x: -60, duration: 5.5, ease: "none" }, 0);
+      tl.fromTo("#gd-l1 .w", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out", stagger: 0.1 }, 0.4);
+      tl.fromTo("#gd-l2 .w", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out", stagger: 0.1 }, 0.85);
+      tl.fromTo(".gd-chip", { opacity: 0, y: 20, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out", stagger: 0.09 }, 1.7);
+      window.__timelines["grid"] = tl;
+    })();
+  </script>
+</template>

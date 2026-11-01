@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #pk-cam { position: absolute; inset: 0; transform-origin: 1380px 520px; }
+    #pk-screen { width: 394px; height: 850px; border-radius: 34px; }
+    #pk-l1 { top: 470px; left: 150px; right: auto; text-align: left; font-size: 88px; }
+  </style>
+  <div id="root" data-composition-id="pocket" data-width="1920" data-height="1080">
+    <div class="stage" id="pk-stage" data-layout-allow-overflow>
+      <div id="pk-cam">
+        <div class="photo">
+          <img class="bgimg" src="assets/photos/phone.jpg" alt="">
+          <div class="screen" id="pk-screen"><img src="assets/ui/mobile-tools.png" alt=""></div>
+        </div>
+      </div>
+      <div class="line ink" id="pk-l1"><span class="w">Right</span><span class="w">in</span><span class="w">your</span><span class="w grad">pocket.</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      // Map the real mobile screen onto the phone in the photo (corners measured in image pixels).
+      function quad(w, h, p) {
+        const [x0, y0] = p[0], [x1, y1] = p[1], [x2, y2] = p[2], [x3, y3] = p[3];
+        const dx1 = x1 - x2, dx2 = x3 - x2, dx3 = x0 - x1 + x2 - x3, dy1 = y1 - y2, dy2 = y3 - y2, dy3 = y0 - y1 + y2 - y3;
+        const den = dx1 * dy2 - dx2 * dy1, g = (dx3 * dy2 - dx2 * dy3) / den, k = (dx1 * dy3 - dx3 * dy1) / den;
+        const a = x1 - x0 + g * x1, b = x3 - x0 + k * x3, d = y1 - y0 + g * y1, e = y3 - y0 + k * y3;
+        return "matrix3d(" + [a / w, d / w, 0, g / w, b / h, e / h, 0, k / h, 0, 0, 1, 0, x0, y0, 0, 1].join(",") + ")";
+      }
+      document.getElementById("pk-screen").style.transform = quad(394, 850, [[1122, 198], [1382, 148], [1702, 842], [1440, 937]]);
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#pk-stage", { opacity: 0, filter: "blur(18px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+      tl.fromTo("#pk-cam", { scale: 1.35 }, { scale: 1.0, duration: 3.1, ease: "power2.out" }, 0);
+      tl.fromTo("#pk-l1 .w", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out", stagger: 0.1 }, 0.7);
+      window.__timelines["pocket"] = tl;
+    })();
+  </script>
+</template>

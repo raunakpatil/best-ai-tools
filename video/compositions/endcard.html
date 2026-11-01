@@ -1,122 +1,54 @@
 <template>
   <style>
-    #root {
-      position: absolute;
-      inset: 0;
-      background: #f2f2f2;
-      overflow: hidden;
-      font-family: var(--font-display);
-    }
-    #ec-disc {
-      position: absolute;
-      inset: 0;
-      background: var(--color-accent);
-      clip-path: circle(1300px at 700px 450px);
-    }
-    #ec-mark {
-      position: absolute;
-      left: 600px;
-      top: 350px;
-      width: 200px;
-      height: 200px;
-      opacity: 0;
-    }
-    #ec-sweep {
-      transform-origin: 100px 100px;
-    }
-    #ec-word {
-      position: absolute;
-      left: 842px;
-      top: 352px;
-      font-size: 196px;
-      font-weight: 700;
-      letter-spacing: -0.055em;
-      line-height: 1;
-      color: var(--color-ink);
-      clip-path: inset(0 100% 0 0);
-    }
-    #ec-btn {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 640px;
-      display: flex;
-      justify-content: center;
-    }
-    #ec-pill {
-      position: relative;
-      padding: 30px 54px;
-      border-radius: 60px;
-      background: var(--color-ink);
-      color: #fff;
-      font-size: 46px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      opacity: 0;
-    }
-    #ec-pill-fill {
-      position: absolute;
-      inset: 0;
-      border-radius: 60px;
-      background: var(--color-accent);
-      opacity: 0;
-    }
-    #ec-pill span {
-      position: relative;
-    }
-    #ec-line {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 800px;
-      text-align: center;
-      font-size: 34px;
-      color: var(--ink-2);
-      letter-spacing: -0.01em;
-      opacity: 0;
-    }
-    #ec-cursor {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 62px;
-      height: 62px;
-      z-index: 10;
-    }
+    #root { position: absolute; inset: 0; }
+    #ec-glow { position: absolute; inset: 0; background: radial-gradient(circle 560px at 50% 44%, rgba(254,122,25,.42) 0%, rgba(254,122,25,.1) 55%, rgba(254,122,25,0) 100%); }
+    #ec-lock { position: absolute; left: 0; right: 0; top: 330px; height: 200px; }
+    #ec-mark { position: absolute; left: 860px; top: 0; width: 200px; height: 200px; }
+    #ec-word { position: absolute; left: 1010px; top: 4px; font-size: 190px; font-weight: 500; letter-spacing: -0.055em; line-height: 1; color: var(--cream); clip-path: inset(0 100% 0 0); }
+    #ec-pill { position: absolute; left: 50%; top: 610px; transform: translateX(-50%); }
+    #ec-pill-in { position: relative; padding: 26px 52px; border-radius: 60px; font-size: 44px; font-weight: 500; letter-spacing: -0.02em; color: var(--cream); white-space: nowrap; opacity: 0; }
+    #ec-fill { position: absolute; inset: 0; border-radius: 60px; background: var(--color-accent); opacity: 0; }
+    #ec-pill-in span { position: relative; }
+    #ec-sub { top: 780px; font-size: 40px; color: var(--mute); }
   </style>
   <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
-    <div id="ec-disc"></div>
-    <svg id="ec-mark" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="5">
-      <circle cx="100" cy="100" r="62" opacity="0.55"/>
-      <circle cx="100" cy="100" r="30" opacity="0.55"/>
-      <g id="ec-sweep"><path d="M100 100 L100 8" stroke-width="6" stroke-linecap="round"/></g>
-      <circle cx="100" cy="100" r="8" fill="#fff" stroke="none"/>
-    </svg>
-    <div id="ec-word">Radar</div>
-    <div id="ec-btn"><div id="ec-pill"><div id="ec-pill-fill"></div><span>raunakpatil.com/radar&nbsp;&nbsp;↗</span></div></div>
-    <div id="ec-line">6,000+ AI tools, and growing every week.</div>
-    <svg id="ec-cursor" viewBox="0 0 32 32"><path d="M6 3 L6 25 L11.5 19.8 L15.2 28 L19 26.3 L15.4 18.3 L23 18.3 Z" fill="#111" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+    <div class="stage" id="ec-stage" data-layout-allow-overflow>
+      <div class="night" style="background: var(--color-night)"></div>
+      <div id="ec-glow"></div>
+      <div id="ec-lock">
+        <svg id="ec-mark" viewBox="0 0 200 200">
+          <defs><linearGradient id="ec-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc48e"/><stop offset=".5" stop-color="#fe7a19"/><stop offset="1" stop-color="#c94a04"/></linearGradient></defs>
+          <circle cx="100" cy="100" r="96" fill="url(#ec-g)"/>
+          <g fill="none" stroke="#fff" stroke-width="5"><circle cx="100" cy="100" r="62" opacity=".6"/><circle cx="100" cy="100" r="30" opacity=".6"/></g>
+          <g id="ec-sweep"><path d="M100 100 L100 12" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g>
+          <circle cx="100" cy="100" r="8" fill="#fff"/>
+        </svg>
+        <div id="ec-word">Radar</div>
+      </div>
+      <div id="ec-pill"><div id="ec-pill-in" class="glass"><div id="ec-fill"></div><span>raunakpatil.com/radar&nbsp; ↗</span></div></div>
+      <div class="line" id="ec-sub"><span class="w">6,000+</span><span class="w">AI</span><span class="w">tools,</span><span class="w">and</span><span class="w">growing</span><span class="w grad">every week.</span></div>
+      <svg id="ec-cursor" class="cursor" viewBox="0 0 32 32"><path d="M6 3 L6 25 L11.5 19.8 L15.2 28 L19 26.3 L15.4 18.3 L23 18.3 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
   </div>
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      // The orange world closes into the mark.
-      tl.fromTo("#ec-disc", { clipPath: "circle(1300px at 700px 450px)" }, { clipPath: "circle(100px at 700px 450px)", duration: 0.6, ease: "power3.inOut" }, 0);
-      tl.fromTo("#ec-mark", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.5);
-      tl.fromTo("#ec-sweep", { rotation: -90 }, { rotation: 270 + 45, duration: 1.6, ease: "power3.out" }, 0.5);
-      tl.fromTo("#ec-word", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6, ease: "expo.out" }, 0.7);
-      tl.fromTo("#ec-word", { x: -40 }, { x: 0, duration: 0.6, ease: "expo.out" }, 0.7);
-
-      // Call to action, then the click.
-      tl.fromTo("#ec-pill", { opacity: 0, scale: 0.85, filter: "blur(8px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 1.25);
-      tl.fromTo("#ec-cursor", { x: 1500, y: 1140 }, { x: 1180, y: 700, duration: 0.7, ease: "power3.out" }, 1.85);
-      tl.to("#ec-cursor", { scale: 0.82, duration: 0.07, ease: "power2.in", transformOrigin: "20% 10%" }, 2.55);
-      tl.to("#ec-cursor", { scale: 1, duration: 0.15, ease: "power2.out" }, 2.62);
-      tl.to("#ec-pill", { scale: 0.95, duration: 0.07, ease: "power2.in" }, 2.55);
-      tl.to("#ec-pill", { scale: 1, duration: 0.3, ease: "back.out(2)" }, 2.62);
-      tl.fromTo("#ec-pill-fill", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 2.58);
-      tl.to("#ec-cursor", { x: 1560, y: 1160, duration: 0.5, ease: "power3.in" }, 3.1);
-      tl.fromTo("#ec-line", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, 2.95);
+      tl.fromTo("#ec-stage", { opacity: 0, filter: "blur(18px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "power2.out" }, 0);
+      // The mark blooms in at centre and lands (38.8 s), then slides left as the name wipes in.
+      tl.fromTo("#ec-mark", { scale: 0.3, rotation: -120, x: 0 }, { scale: 1, rotation: 0, x: 0, duration: 0.6, ease: "back.out(1.5)" }, 0);
+      tl.fromTo("#ec-sweep", { rotation: 0, svgOrigin: "100 100" }, { rotation: 405, svgOrigin: "100 100", duration: 1.6, ease: "power3.out" }, 0.1);
+      tl.fromTo("#ec-glow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 1.0, ease: "power3.out" }, 0);
+      tl.to("#ec-mark", { x: -250, duration: 0.6, ease: "power3.inOut" }, 0.75);
+      tl.fromTo("#ec-word", { clipPath: "inset(0% 100% 0% 0%)", x: -170 }, { clipPath: "inset(0% 0% 0% 0%)", x: -170, duration: 0.6, ease: "expo.out" }, 0.95);
+      tl.fromTo("#ec-pill-in", { opacity: 0, y: 30, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 1.45);
+      tl.fromTo("#ec-cursor", { x: 1500, y: 1140 }, { x: 1150, y: 680, duration: 0.65, ease: "power3.out" }, 1.85);
+      tl.to("#ec-cursor", { scale: 0.82, duration: 0.07, transformOrigin: "20% 10%", ease: "power2.in" }, 2.5);
+      tl.to("#ec-cursor", { scale: 1, duration: 0.15, ease: "power2.out" }, 2.57);
+      tl.to("#ec-pill-in", { scale: 0.95, duration: 0.07, ease: "power2.in" }, 2.5);
+      tl.to("#ec-pill-in", { scale: 1, duration: 0.3, ease: "back.out(2)" }, 2.57);
+      tl.fromTo("#ec-fill", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 2.53);
+      tl.to("#ec-cursor", { x: 1560, y: 1160, duration: 0.5, ease: "power3.in" }, 3.0);
+      tl.fromTo("#ec-sub .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out", stagger: 0.07 }, 2.85);
       window.__timelines["endcard"] = tl;
     })();
   </script>

@@ -1,4 +1,10 @@
-# Review: Radar launch film
+# Review: Radar launch film (v2)
+
+v2 rebuilds the film in the grammar of the two Lovio reference films the author supplied (see SPEC.md):
+night worlds with an orange glow, thin centred type arriving word by word through a blur, a glass
+prompt box, real Radar screens mapped onto the laptop and phone in the author's photos, a rolling
+search list, a "Fewer tabs / Fewer guesses / Better picks / Fresh, every week" run, a blooming mark,
+and blur dissolves or zooms at every seam (no hard cuts). v1 (flat light Apple look) is in git history.
 
 Rendered `renders/radar-launch.mp4`: 1920x1080, 30 fps, 43.6 s, H.264 + AAC.
 

@@ -1,0 +1,50 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #sr-label { position: absolute; right: 1080px; top: 492px; font-size: 76px; font-weight: 400; letter-spacing: -0.035em; color: var(--mute); white-space: nowrap; }
+    #sr-col { position: absolute; left: 880px; top: 0; }
+    .sr-row { height: 116px; line-height: 116px; font-size: 76px; font-weight: 400; letter-spacing: -0.035em; color: var(--cream); white-space: nowrap; }
+    #sr-mask { position: absolute; inset: 0; background: linear-gradient(180deg, var(--color-night) 0%, rgba(11,8,7,0) 30%, rgba(11,8,7,0) 70%, var(--color-night) 100%); pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="search" data-width="1920" data-height="1080">
+    <div class="stage" id="sr-stage" data-layout-allow-overflow>
+      <div class="night" style="background: radial-gradient(ellipse 1100px 700px at 0% 50%, rgba(254,122,25,.42) 0%, rgba(254,122,25,0) 70%), var(--color-night)"></div>
+      <div id="sr-col">
+        <div class="sr-row">best AI video tool</div>
+        <div class="sr-row">ChatGPT vs Claude</div>
+        <div class="sr-row">is Kling free?</div>
+        <div class="sr-row">OpusClip alternatives</div>
+        <div class="sr-row">AI tools list 2026</div>
+        <div class="sr-row">which AI should I use</div>
+        <div class="sr-row">40 tabs later…</div>
+      </div>
+      <div id="sr-mask" data-layout-ignore></div>
+      <div id="sr-label">You searched</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const rows = gsap.utils.toArray("#sr-col .sr-row");
+      const ROW = 116, CENTER = 492; // y of the focus line
+      // The list rolls one search at a time; each row's brightness is a pure function of where it sits.
+      const pos = { i: 0 };
+      const place = () => {
+        const y = CENTER - pos.i * ROW;
+        gsap.set("#sr-col", { y: y });
+        rows.forEach((r, k) => {
+          const d = Math.abs(k - pos.i);
+          r.style.opacity = String(Math.max(0.12, 1 - d * 0.62));
+          r.style.color = k === rows.length - 1 && d < 0.5 ? "#fe7a19" : "";
+        });
+      };
+      tl.fromTo("#sr-stage", { opacity: 0, filter: "blur(18px)", scale: 1.04 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.5, ease: "power2.out" }, 0);
+      tl.fromTo(pos, { i: 0 }, { i: 0, duration: 0.01, onUpdate: place }, 0);
+      for (let k = 1; k < rows.length; k++) {
+        tl.to(pos, { i: k, duration: 0.32, ease: "power3.inOut", onUpdate: place }, 0.55 + (k - 1) * 0.47);
+      }
+      tl.fromTo("#sr-label", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power3.out" }, 0.3);
+      window.__timelines["search"] = tl;
+    })();
+  </script>
+</template>
