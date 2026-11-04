@@ -1,7 +1,7 @@
-// Audits Radar's on-page SEO. Lives in raunakpatil.github.io/scripts/ (copy it there).
+// Audits Radar's on-page SEO. Copy to raunakpatil.github.io/scripts/audit-seo.mjs.
 // From that repo: node scripts/audit-seo.mjs
-// Against the live site, from anywhere: node audit-seo.mjs --live
-// Audits Radar's on-page SEO from the built files (or, with --live, from https://raunakpatil.com).
+// Against the live site, from anywhere: node scripts/site/audit-seo.mjs --live
+// Reads the built files next to this script's parent directory, or, with --live, https://raunakpatil.com.
 //   node scripts/audit-seo.mjs
 //   node scripts/audit-seo.mjs --live
 //   node scripts/audit-seo.mjs --schema     also ask validator.schema.org about one page of each kind
